@@ -12,7 +12,7 @@ class YatzyTest {
             "1 1 3 3 6 14",
             "4 5 5 6 1 21"
     }, delimiter = ' ')
-    void chance_scores_sum_of_all_dice(int d1, int d2, int d3, int d4, int d5, int expected) {
+    void test_chance(int d1, int d2, int d3, int d4, int d5, int expected) {
         assertEquals(expected, Yatzy.chance(d1, d2, d3, d4, d5));
     }
 
@@ -24,7 +24,7 @@ class YatzyTest {
             "1 1 1 2 1 0",
             "6 6 6 6 3 0"
     }, delimiter = ' ')
-    void yatzy_scores_50(int d1, int d2, int d3, int d4, int d5, int expected) {
+    void test_yatzy(int d1, int d2, int d3, int d4, int d5, int expected) {
         assertEquals(expected, Yatzy.yatzy(d1, d2, d3, d4, d5));
     }
 
@@ -101,7 +101,7 @@ class YatzyTest {
             "5 3 3 3 5 10",
             "5 3 6 6 5 12"
     }, delimiter = ' ')
-    void test_one_pair(int d1, int d2, int d3, int d4, int d5, int expected) {
+    void test_onePair(int d1, int d2, int d3, int d4, int d5, int expected) {
         assertEquals(expected, Yatzy.score_pair(d1, d2, d3, d4, d5));
     }
 
@@ -114,7 +114,7 @@ class YatzyTest {
             "1 1 2 2 2 6",
             "3 3 3 3 1 0"
     }, delimiter = ' ')
-    void test_two_pair(int d1, int d2, int d3, int d4, int d5, int expected) {
+    void test_twoPairs(int d1, int d2, int d3, int d4, int d5, int expected) {
         assertEquals(expected, Yatzy.two_pair(d1, d2, d3, d4, d5));
     }
 
@@ -126,7 +126,7 @@ class YatzyTest {
             "3 3 4 5 6 0",
             "3 3 3 3 1 9"
     }, delimiter = ' ')
-    void test_three_of_a_kind(int d1, int d2, int d3, int d4, int d5, int expected) {
+    void test_threeOfAKind(int d1, int d2, int d3, int d4, int d5, int expected) {
         assertEquals(expected, Yatzy.three_of_a_kind(d1, d2, d3, d4, d5));
     }
 
@@ -139,7 +139,7 @@ class YatzyTest {
             "2 2 2 5 5 0",
             "2 2 2 2 2 8"
     }, delimiter = ' ')
-    void test_four_of_a_kind(int d1, int d2, int d3, int d4, int d5, int expected) {
+    void test_fourOfAKind(int d1, int d2, int d3, int d4, int d5, int expected) {
         assertEquals(expected, Yatzy.four_of_a_kind(d1, d2, d3, d4, d5));
     }
 
@@ -149,7 +149,7 @@ class YatzyTest {
             "2 3 4 5 1 15",
             "1 2 2 4 5 0"
     }, delimiter = ' ')
-    void test_small_straight(int d1, int d2, int d3, int d4, int d5, int expected) {
+    void test_smallStraight(int d1, int d2, int d3, int d4, int d5, int expected) {
         assertEquals(expected, Yatzy.smallStraight(d1, d2, d3, d4, d5));
     }
 
@@ -159,7 +159,7 @@ class YatzyTest {
             "2 3 4 5 6 20",
             "1 2 2 4 5 0"
     }, delimiter = ' ')
-    void test_large_straight(int d1, int d2, int d3, int d4, int d5, int expected) {
+    void test_largeStraight(int d1, int d2, int d3, int d4, int d5, int expected) {
         assertEquals(expected, Yatzy.largeStraight(d1, d2, d3, d4, d5));
     }
 
@@ -171,7 +171,7 @@ class YatzyTest {
             "2 2 3 3 4 0",
             "4 4 4 4 4 0"
     }, delimiter = ' ')
-    void test_full_house(int d1, int d2, int d3, int d4, int d5, int expected) {
+    void test_fullHouse(int d1, int d2, int d3, int d4, int d5, int expected) {
         assertEquals(expected, Yatzy.fullHouse(d1, d2, d3, d4, d5));
     }
 }
