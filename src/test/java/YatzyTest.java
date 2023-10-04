@@ -36,7 +36,7 @@ class YatzyTest {
             "1 2 1 1 1 4",
             "3 3 3 4 5 0"
     }, delimiter = ' ')
-    void test_1s(int d1, int d2, int d3, int d4, int d5, int expected) {
+    void test_ones(int d1, int d2, int d3, int d4, int d5, int expected) {
         assertEquals(expected, Yatzy.ones(d1, d2, d3, d4, d5));
     }
 
@@ -46,7 +46,7 @@ class YatzyTest {
             "2 2 2 2 2 10",
             "2 3 2 5 1 4"
     }, delimiter = ' ')
-    void test_2s(int d1, int d2, int d3, int d4, int d5, int expected) {
+    void test_twos(int d1, int d2, int d3, int d4, int d5, int expected) {
         assertEquals(expected, Yatzy.twos(d1, d2, d3, d4, d5));
     }
 
@@ -55,7 +55,7 @@ class YatzyTest {
             "1 2 3 2 3 6",
             "2 3 3 3 3 12"
     }, delimiter = ' ')
-    void test_3s(int d1, int d2, int d3, int d4, int d5, int expected) {
+    void test_threes(int d1, int d2, int d3, int d4, int d5, int expected) {
         assertEquals(expected, Yatzy.threes(d1, d2, d3, d4, d5));
     }
 
@@ -66,7 +66,7 @@ class YatzyTest {
             "4 4 5 5 5 8",
             "4 5 5 5 5 4"
     }, delimiter = ' ')
-    void test_4s(int d1, int d2, int d3, int d4, int d5, int expected) {
+    void test_fours(int d1, int d2, int d3, int d4, int d5, int expected) {
         assertEquals(expected, new Yatzy(d1, d2, d3, d4, d5).fours());
     }
 
@@ -76,7 +76,7 @@ class YatzyTest {
             "4 4 5 5 5 15",
             "4 5 5 5 5 20"
     }, delimiter = ' ')
-    void test_5s(int d1, int d2, int d3, int d4, int d5, int expected) {
+    void test_fives(int d1, int d2, int d3, int d4, int d5, int expected) {
         assertEquals(expected, new Yatzy(d1, d2, d3, d4, d5).fives());
     }
 
@@ -86,7 +86,7 @@ class YatzyTest {
             "4 4 6 5 5 6",
             "6 5 6 6 5 18"
     }, delimiter = ' ')
-    void test_6s(int d1, int d2, int d3, int d4, int d5, int expected) {
+    void test_sixes(int d1, int d2, int d3, int d4, int d5, int expected) {
         assertEquals(expected, new Yatzy(d1, d2, d3, d4, d5).sixes());
     }
 
