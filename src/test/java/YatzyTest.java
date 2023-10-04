@@ -51,10 +51,13 @@ class YatzyTest {
         assertEquals(expected, Yatzy.twos(d1, d2, d3, d4, d5));
     }
 
-    @Test
-    void test_threes() {
-        assertEquals(6, Yatzy.threes(1, 2, 3, 2, 3));
-        assertEquals(12, Yatzy.threes(2, 3, 3, 3, 3));
+    @ParameterizedTest
+    @CsvSource(value = {
+            "1 2 3 2 3 6",
+            "2 3 3 3 3 12"
+    }, delimiter = ' ')
+    void test_3s(int d1, int d2, int d3, int d4, int d5, int expected) {
+        assertEquals(expected, Yatzy.threes(d1, d2, d3, d4, d5));
     }
 
     @Test
