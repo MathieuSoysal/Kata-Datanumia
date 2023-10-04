@@ -4,12 +4,12 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-import io.github.mathieusoysal.DiceResults;
+import io.github.mathieusoysal.Dices;
 
 class YMTwoPairs implements YatzyModInterface {
 
     @Override
-    public int calculate(DiceResults diceResults) {
+    public int calculate(Dices diceResults) {
         Collection<Integer> diceCollection = diceResults.getDicesIntStream()
                 .boxed().toList();
         List<Integer> pairs = diceResults.getDicesIntStream()

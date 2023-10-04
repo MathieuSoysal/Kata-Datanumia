@@ -2,10 +2,10 @@ package io.github.mathieusoysal;
 
 import java.util.stream.IntStream;
 
-public class DiceResults {
+public class Dices {
     private int[] dices;
 
-    public DiceResults(int dice1, int dice2, int dice3, int dice4, int dice5) {
+    public Dices(int dice1, int dice2, int dice3, int dice4, int dice5) {
         dices = new int[] { dice1, dice2, dice3, dice4, dice5 };
     }
 

@@ -1,7 +1,7 @@
 package io.github.mathieusoysal.yatzy_mod;
 
-import io.github.mathieusoysal.DiceResults;
+import io.github.mathieusoysal.Dices;
 
 interface YatzyModInterface {
-    int calculate(DiceResults diceResults);
+    int calculate(Dices diceResults);
 }

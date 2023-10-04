@@ -1,6 +1,6 @@
 package io.github.mathieusoysal.yatzy_mod;
 
-import io.github.mathieusoysal.DiceResults;
+import io.github.mathieusoysal.Dices;
 
 public enum YatzyMod {
     CHANCE(new YMChance()),
@@ -25,7 +25,7 @@ public enum YatzyMod {
         this.yatzyMod = yatzyMod;
     }
 
-    public int calculate(DiceResults dice) {
+    public int calculate(Dices dice) {
         return yatzyMod.calculate(dice);
     }
 }
