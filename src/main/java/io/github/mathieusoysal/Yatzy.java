@@ -9,28 +9,23 @@ public class Yatzy {
     }
 
     public static int chance(int d1, int d2, int d3, int d4, int d5) {
-        Dices diceResults = new Dices(d1, d2, d3, d4, d5);
-        return YatzyMod.CHANCE.calculateScore(diceResults);
+        return calculateScore(YatzyMod.CHANCE, new Dices(d1, d2, d3, d4, d5));
     }
 
     public static int yatzy(int d1, int d2, int d3, int d4, int d5) {
-        Dices diceResults = new Dices(d1, d2, d3, d4, d5);
-        return YatzyMod.YATZY.calculateScore(diceResults);
+        return calculateScore(YatzyMod.YATZY, new Dices(d1, d2, d3, d4, d5));
     }
 
     public static int ones(int d1, int d2, int d3, int d4, int d5) {
-        Dices diceResults = new Dices(d1, d2, d3, d4, d5);
-        return YatzyMod.ONES.calculateScore(diceResults);
+        return calculateScore(YatzyMod.ONES, new Dices(d1, d2, d3, d4, d5));
     }
 
     public static int twos(int d1, int d2, int d3, int d4, int d5) {
-        Dices diceResults = new Dices(d1, d2, d3, d4, d5);
-        return YatzyMod.TWOS.calculateScore(diceResults);
+        return calculateScore(YatzyMod.TWOS, new Dices(d1, d2, d3, d4, d5));
     }
 
     public static int threes(int d1, int d2, int d3, int d4, int d5) {
-        Dices diceResults = new Dices(d1, d2, d3, d4, d5);
-        return YatzyMod.THREES.calculateScore(diceResults);
+        return calculateScore(YatzyMod.THREES, new Dices(d1, d2, d3, d4, d5));
     }
 
     protected int[] dice;
@@ -60,38 +55,31 @@ public class Yatzy {
     }
 
     public static int score_pair(int d1, int d2, int d3, int d4, int d5) {
-        Dices diceResults = new Dices(d1, d2, d3, d4, d5);
-        return YatzyMod.PAIR.calculateScore(diceResults);
+        return calculateScore(YatzyMod.PAIR, new Dices(d1, d2, d3, d4, d5));
     }
 
     public static int two_pair(int d1, int d2, int d3, int d4, int d5) {
-        Dices diceResults = new Dices(d1, d2, d3, d4, d5);
-        return YatzyMod.TWO_PAIRS.calculateScore(diceResults);
+        return calculateScore(YatzyMod.TWO_PAIRS, new Dices(d1, d2, d3, d4, d5));
     }
 
     public static int four_of_a_kind(int d1, int d2, int d3, int d4, int d5) {
-        Dices diceResults = new Dices(d1, d2, d3, d4, d5);
-        return YatzyMod.FOUR_OF_A_KIND.calculateScore(diceResults);
+        return calculateScore(YatzyMod.FOUR_OF_A_KIND, new Dices(d1, d2, d3, d4, d5));
     }
 
     public static int three_of_a_kind(int d1, int d2, int d3, int d4, int d5) {
-        Dices diceResults = new Dices(d1, d2, d3, d4, d5);
-        return YatzyMod.THREE_OF_A_KIND.calculateScore(diceResults);
+        return calculateScore(YatzyMod.THREE_OF_A_KIND, new Dices(d1, d2, d3, d4, d5));
     }
 
     public static int smallStraight(int d1, int d2, int d3, int d4, int d5) {
-        Dices diceResults = new Dices(d1, d2, d3, d4, d5);
-        return YatzyMod.SMALL_STRAIGHT.calculateScore(diceResults);
+        return calculateScore(YatzyMod.SMALL_STRAIGHT, new Dices(d1, d2, d3, d4, d5));
     }
 
     public static int largeStraight(int d1, int d2, int d3, int d4, int d5) {
-        Dices diceResults = new Dices(d1, d2, d3, d4, d5);
-        return YatzyMod.LARGE_STRAIGHT.calculateScore(diceResults);
+        return calculateScore(YatzyMod.LARGE_STRAIGHT, new Dices(d1, d2, d3, d4, d5));
 
     }
 
     public static int fullHouse(int d1, int d2, int d3, int d4, int d5) {
-        Dices diceResults = new Dices(d1, d2, d3, d4, d5);
-        return YatzyMod.FULL_HOUSE.calculateScore(diceResults);
+        return calculateScore(YatzyMod.FULL_HOUSE, new Dices(d1, d2, d3, d4, d5));
     }
 }
