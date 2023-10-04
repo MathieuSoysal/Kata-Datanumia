@@ -20,7 +20,9 @@ class YatzyTest {
         int expected = 50;
         int actual = Yatzy.yatzy(4, 4, 4, 4, 4);
         assertEquals(expected, actual);
+        assertEquals(50, Yatzy.yatzy(1, 1, 1, 1, 1));
         assertEquals(50, Yatzy.yatzy(6, 6, 6, 6, 6));
+        assertEquals(0, Yatzy.yatzy(1, 1, 1, 2, 1));
         assertEquals(0, Yatzy.yatzy(6, 6, 6, 6, 3));
     }
 
