@@ -8,7 +8,7 @@ import io.github.mathieusoysal.Dices;
 class YMFullHouse implements YatzyModInterface {
 
     @Override
-    public int calculate(Dices diceResults) {
+    public int calculateScore(Dices diceResults) {
         Collection<Integer> diceCollection = diceResults.getDicesIntStream()
                 .boxed().toList();
         if (containsTriplet(diceResults, diceCollection) && containsPair(diceResults, diceCollection))

@@ -5,7 +5,7 @@ import io.github.mathieusoysal.Dices;
 class YMFours implements YatzyModInterface {
 
     @Override
-    public int calculate(Dices diceResults) {
+    public int calculateScore(Dices diceResults) {
         return YatzyModUtils.filterAndSum(4, diceResults);
     }
 

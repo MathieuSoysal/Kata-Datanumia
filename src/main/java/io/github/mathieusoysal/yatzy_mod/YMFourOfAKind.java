@@ -8,7 +8,7 @@ import io.github.mathieusoysal.Dices;
 class YMFourOfAKind implements YatzyModInterface {
 
     @Override
-    public int calculate(Dices diceResults) {
+    public int calculateScore(Dices diceResults) {
         Collection<Integer> diceCollection = diceResults.getDicesIntStream()
                 .boxed().toList();
         return diceResults.getDicesIntStream()

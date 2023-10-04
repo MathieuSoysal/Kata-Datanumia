@@ -19,13 +19,13 @@ public enum YatzyMod {
     LARGE_STRAIGHT(new YMLargeStraight()),
     FULL_HOUSE(new YMFullHouse());
 
-    private YatzyModInterface yatzyMod;
+    private YatzyModInterface mod;
 
-    YatzyMod(YatzyModInterface yatzyMod) {
-        this.yatzyMod = yatzyMod;
+    YatzyMod(YatzyModInterface mod) {
+        this.mod = mod;
     }
 
-    public int calculate(Dices dice) {
-        return yatzyMod.calculate(dice);
+    public int calculateScore(Dices dices) {
+        return mod.calculateScore(dices);
     }
 }
