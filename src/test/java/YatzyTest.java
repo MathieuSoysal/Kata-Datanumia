@@ -71,11 +71,14 @@ class YatzyTest {
         assertEquals(expected, new Yatzy(d1, d2, d3, d4, d5).fours());
     }
 
-    @Test
-    void fives() {
-        assertEquals(10, new Yatzy(4, 4, 4, 5, 5).fives());
-        assertEquals(15, new Yatzy(4, 4, 5, 5, 5).fives());
-        assertEquals(20, new Yatzy(4, 5, 5, 5, 5).fives());
+    @ParameterizedTest
+    @CsvSource(value = {
+            "4 4 4 5 5 10",
+            "4 4 5 5 5 15",
+            "4 5 5 5 5 20"
+    }, delimiter = ' ')
+    void test_5s(int d1, int d2, int d3, int d4, int d5, int expected) {
+        assertEquals(expected, new Yatzy(d1, d2, d3, d4, d5).fives());
     }
 
     @Test
