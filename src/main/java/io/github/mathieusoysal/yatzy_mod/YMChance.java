@@ -6,7 +6,7 @@ class YMChance implements YatzyModInterface {
 
     @Override
     public int calculate(DiceResults diceResults) {
-        return diceResults.getDices().sum();
+        return diceResults.getDicesIntStream().sum();
     }
 
 }

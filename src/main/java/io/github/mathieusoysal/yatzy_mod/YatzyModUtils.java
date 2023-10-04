@@ -9,7 +9,7 @@ class YatzyModUtils {
     }
 
     static int filterAndSum(int diceNumber, DiceResults diceResults) {
-        return diceResults.getDices()
+        return diceResults.getDicesIntStream()
                 .filter(d -> d == diceNumber)
                 .sum();
     }

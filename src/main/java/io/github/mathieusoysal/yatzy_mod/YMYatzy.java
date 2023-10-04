@@ -6,7 +6,7 @@ class YMYatzy implements YatzyModInterface {
 
     @Override
     public int calculate(DiceResults diceResults) {
-        return diceResults.getDices().distinct().count() == 1 ? 50 : 0;
+        return diceResults.getDicesIntStream().distinct().count() == 1 ? 50 : 0;
     }
 
 }
