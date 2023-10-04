@@ -106,14 +106,17 @@ class YatzyTest {
         assertEquals(expected, Yatzy.score_pair(d1, d2, d3, d4, d5));
     }
 
-    @Test
-    void two_Pair() {
-        assertEquals(16, Yatzy.two_pair(3, 3, 5, 4, 5));
-        assertEquals(16, Yatzy.two_pair(3, 3, 5, 5, 5));
-        assertEquals(8, Yatzy.two_pair(1, 1, 2, 3, 3));
-        assertEquals(0, Yatzy.two_pair(1, 1, 2, 3, 4));
-        assertEquals(6, Yatzy.two_pair(1, 1, 2, 2, 2));
-        assertEquals(0, Yatzy.two_pair(3, 3, 3, 3, 1));
+    @ParameterizedTest
+    @CsvSource(value = {
+            "3 3 5 4 5 16",
+            "3 3 5 5 5 16",
+            "1 1 2 3 3 8",
+            "1 1 2 3 4 0",
+            "1 1 2 2 2 6",
+            "3 3 3 3 1 0"
+    }, delimiter = ' ')
+    void test_two_pair(int d1, int d2, int d3, int d4, int d5, int expected) {
+        assertEquals(expected, Yatzy.two_pair(d1, d2, d3, d4, d5));
     }
 
     @Test
