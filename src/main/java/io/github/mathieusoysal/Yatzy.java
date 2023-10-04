@@ -46,12 +46,8 @@ public class Yatzy {
     }
 
     public int fives() {
-        int s = 0;
-        int i;
-        for (i = 0; i < dice.length; i++)
-            if (dice[i] == 5)
-                s = s + 5;
-        return s;
+        DiceResults diceResults = new DiceResults(dice[0], dice[1], dice[2], dice[3], dice[4]);
+        return YatzyMod.FIVES.calculate(diceResults);
     }
 
     public int sixes() {
