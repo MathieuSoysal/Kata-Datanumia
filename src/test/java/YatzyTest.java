@@ -1,18 +1,15 @@
-import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
+import org.junit.jupiter.api.Test;
 
 class YatzyTest {
 
-    @Test
-    void chance_scores_sum_of_all_dice() {
-        int expected = 15;
-        int actual = Yatzy.chance(2, 3, 4, 5, 1);
-        assertEquals(expected, actual);
-        assertEquals(16, Yatzy.chance(3, 3, 4, 5, 1));
-        assertEquals(14, Yatzy.chance(1, 1, 3, 3, 6));
-        assertEquals(21, Yatzy.chance(4, 5, 5, 6, 1));
+    @ParameterizedTest
+    @CsvSource(value = { "2 3 4 5 1 15", "3 3 4 5 1 16", "1 1 3 3 6 14", "4 5 5 6 1 21" }, delimiter = ' ')
+    void chance_scores_sum_of_all_dice(int d1, int d2, int d3, int d4, int d5, int expected) {
+        assertEquals(expected, Yatzy.chance(d1, d2, d3, d4, d5));
     }
 
     @Test
