@@ -106,6 +106,9 @@ class YatzyTest {
         assertEquals(12, Yatzy.four_of_a_kind(3, 3, 3, 3, 5));
         assertEquals(20, Yatzy.four_of_a_kind(5, 5, 5, 4, 5));
         assertEquals(12, Yatzy.four_of_a_kind(3, 3, 3, 3, 3));
+        assertEquals(8, Yatzy.four_of_a_kind(2, 2, 2, 2, 5));
+        assertEquals(0, Yatzy.four_of_a_kind(2, 2, 2, 5, 5));
+        assertEquals(8, Yatzy.four_of_a_kind(2, 2, 2, 2, 2));
     }
 
     @Test
