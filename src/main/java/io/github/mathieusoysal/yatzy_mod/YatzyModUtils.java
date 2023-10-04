@@ -4,6 +4,10 @@ import io.github.mathieusoysal.DiceResults;
 
 class YatzyModUtils {
 
+    private YatzyModUtils() {
+        throw new IllegalStateException("Utility class");
+    }
+
     static int filterAndSum(int diceNumber, DiceResults diceResults) {
         return diceResults.getDices()
                 .filter(d -> d == diceNumber)
