@@ -7,20 +7,26 @@ import org.junit.jupiter.api.Test;
 class YatzyTest {
 
     @ParameterizedTest
-    @CsvSource(value = { "2 3 4 5 1 15", "3 3 4 5 1 16", "1 1 3 3 6 14", "4 5 5 6 1 21" }, delimiter = ' ')
+    @CsvSource(value = {
+            "2 3 4 5 1 15",
+            "3 3 4 5 1 16",
+            "1 1 3 3 6 14",
+            "4 5 5 6 1 21"
+    }, delimiter = ' ')
     void chance_scores_sum_of_all_dice(int d1, int d2, int d3, int d4, int d5, int expected) {
         assertEquals(expected, Yatzy.chance(d1, d2, d3, d4, d5));
     }
 
-    @Test
-    void yatzy_scores_50() {
-        int expected = 50;
-        int actual = Yatzy.yatzy(4, 4, 4, 4, 4);
-        assertEquals(expected, actual);
-        assertEquals(50, Yatzy.yatzy(1, 1, 1, 1, 1));
-        assertEquals(50, Yatzy.yatzy(6, 6, 6, 6, 6));
-        assertEquals(0, Yatzy.yatzy(1, 1, 1, 2, 1));
-        assertEquals(0, Yatzy.yatzy(6, 6, 6, 6, 3));
+    @ParameterizedTest
+    @CsvSource(value = {
+            "4 4 4 4 4 50",
+            "1 1 1 1 1 50",
+            "6 6 6 6 6 50",
+            "1 1 1 2 1 0",
+            "6 6 6 6 3 0"
+    }, delimiter = ' ')
+    void yatzy_scores_50(int d1, int d2, int d3, int d4, int d5, int expected) {
+        assertEquals(expected, Yatzy.yatzy(d1, d2, d3, d4, d5));
     }
 
     @Test
