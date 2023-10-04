@@ -8,63 +8,63 @@ public class Yatzy {
         return mod.calculateScore(dices);
     }
 
-    public static int chance(int d1, int d2, int d3, int d4, int d5) {
-        return calculateScore(YatzyMod.CHANCE, new Dices(d1, d2, d3, d4, d5));
+    public static int chance(Dices dices) {
+        return calculateScore(YatzyMod.CHANCE, dices);
     }
 
-    public static int yatzy(int d1, int d2, int d3, int d4, int d5) {
-        return calculateScore(YatzyMod.YATZY, new Dices(d1, d2, d3, d4, d5));
+    public static int yatzy(Dices dices) {
+        return calculateScore(YatzyMod.YATZY, dices);
     }
 
-    public static int ones(int d1, int d2, int d3, int d4, int d5) {
-        return calculateScore(YatzyMod.ONES, new Dices(d1, d2, d3, d4, d5));
+    public static int ones(Dices dices) {
+        return calculateScore(YatzyMod.ONES, dices);
     }
 
-    public static int twos(int d1, int d2, int d3, int d4, int d5) {
-        return calculateScore(YatzyMod.TWOS, new Dices(d1, d2, d3, d4, d5));
+    public static int twos(Dices dices) {
+        return calculateScore(YatzyMod.TWOS, dices);
     }
 
-    public static int threes(int d1, int d2, int d3, int d4, int d5) {
-        return calculateScore(YatzyMod.THREES, new Dices(d1, d2, d3, d4, d5));
+    public static int threes(Dices dices) {
+        return calculateScore(YatzyMod.THREES, dices);
     }
 
-    public static int fours(int d1, int d2, int d3, int d4, int d5) {
-        return calculateScore(YatzyMod.FOURS, new Dices(d1, d2, d3, d4, d5));
+    public static int fours(Dices dices) {
+        return calculateScore(YatzyMod.FOURS, dices);
     }
 
-    public static int fives(int d1, int d2, int d3, int d4, int d5) {
-        return calculateScore(YatzyMod.FIVES, new Dices(d1, d2, d3, d4, d5));
+    public static int fives(Dices dices) {
+        return calculateScore(YatzyMod.FIVES, dices);
     }
 
-    public static int sixes(int d1, int d2, int d3, int d4, int d5) {
-        return calculateScore(YatzyMod.SIXES, new Dices(d1, d2, d3, d4, d5));
+    public static int sixes(Dices dices) {
+        return calculateScore(YatzyMod.SIXES, dices);
     }
 
-    public static int pair(int d1, int d2, int d3, int d4, int d5) {
-        return calculateScore(YatzyMod.PAIR, new Dices(d1, d2, d3, d4, d5));
+    public static int pair(Dices dices) {
+        return calculateScore(YatzyMod.PAIR, dices);
     }
 
-    public static int twoPairs(int d1, int d2, int d3, int d4, int d5) {
-        return calculateScore(YatzyMod.TWO_PAIRS, new Dices(d1, d2, d3, d4, d5));
+    public static int twoPairs(Dices dices) {
+        return calculateScore(YatzyMod.TWO_PAIRS, dices);
     }
 
-    public static int fourOfAKind(int d1, int d2, int d3, int d4, int d5) {
-        return calculateScore(YatzyMod.FOUR_OF_A_KIND, new Dices(d1, d2, d3, d4, d5));
+    public static int fourOfAKind(Dices dices) {
+        return calculateScore(YatzyMod.FOUR_OF_A_KIND, dices);
     }
 
-    public static int threeOfAKind(int d1, int d2, int d3, int d4, int d5) {
-        return calculateScore(YatzyMod.THREE_OF_A_KIND, new Dices(d1, d2, d3, d4, d5));
+    public static int threeOfAKind(Dices dices) {
+        return calculateScore(YatzyMod.THREE_OF_A_KIND, dices);
     }
 
-    public static int smallStraight(int d1, int d2, int d3, int d4, int d5) {
-        return calculateScore(YatzyMod.SMALL_STRAIGHT, new Dices(d1, d2, d3, d4, d5));
+    public static int smallStraight(Dices dices) {
+        return calculateScore(YatzyMod.SMALL_STRAIGHT, dices);
     }
 
-    public static int largeStraight(int d1, int d2, int d3, int d4, int d5) {
-        return calculateScore(YatzyMod.LARGE_STRAIGHT, new Dices(d1, d2, d3, d4, d5));
+    public static int largeStraight(Dices dices) {
+        return calculateScore(YatzyMod.LARGE_STRAIGHT, dices);
     }
 
-    public static int fullHouse(int d1, int d2, int d3, int d4, int d5) {
-        return calculateScore(YatzyMod.FULL_HOUSE, new Dices(d1, d2, d3, d4, d5));
+    public static int fullHouse(Dices dices) {
+        return calculateScore(YatzyMod.FULL_HOUSE, dices);
     }
 }

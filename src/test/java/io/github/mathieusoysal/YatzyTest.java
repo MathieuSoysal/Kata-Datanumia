@@ -15,7 +15,7 @@ class YatzyTest {
             "4 5 5 6 1 21"
     }, delimiter = ' ')
     void test_chance(int d1, int d2, int d3, int d4, int d5, int expected) {
-        assertEquals(expected, Yatzy.chance(d1, d2, d3, d4, d5));
+        assertEquals(expected, Yatzy.chance(new Dices(d1, d2, d3, d4, d5)));
     }
 
     @ParameterizedTest
@@ -27,7 +27,7 @@ class YatzyTest {
             "6 6 6 6 3 0"
     }, delimiter = ' ')
     void test_yatzy(int d1, int d2, int d3, int d4, int d5, int expected) {
-        assertEquals(expected, Yatzy.yatzy(d1, d2, d3, d4, d5));
+        assertEquals(expected, Yatzy.yatzy(new Dices(d1, d2, d3, d4, d5)));
     }
 
     @ParameterizedTest
@@ -39,7 +39,7 @@ class YatzyTest {
             "3 3 3 4 5 0"
     }, delimiter = ' ')
     void test_ones(int d1, int d2, int d3, int d4, int d5, int expected) {
-        assertEquals(expected, Yatzy.ones(d1, d2, d3, d4, d5));
+        assertEquals(expected, Yatzy.ones(new Dices(d1, d2, d3, d4, d5)));
     }
 
     @ParameterizedTest
@@ -49,7 +49,7 @@ class YatzyTest {
             "2 3 2 5 1 4"
     }, delimiter = ' ')
     void test_twos(int d1, int d2, int d3, int d4, int d5, int expected) {
-        assertEquals(expected, Yatzy.twos(d1, d2, d3, d4, d5));
+        assertEquals(expected, Yatzy.twos(new Dices(d1, d2, d3, d4, d5)));
     }
 
     @ParameterizedTest
@@ -58,7 +58,7 @@ class YatzyTest {
             "2 3 3 3 3 12"
     }, delimiter = ' ')
     void test_threes(int d1, int d2, int d3, int d4, int d5, int expected) {
-        assertEquals(expected, Yatzy.threes(d1, d2, d3, d4, d5));
+        assertEquals(expected, Yatzy.threes(new Dices(d1, d2, d3, d4, d5)));
     }
 
     @ParameterizedTest
@@ -69,7 +69,7 @@ class YatzyTest {
             "4 5 5 5 5 4"
     }, delimiter = ' ')
     void test_fours(int d1, int d2, int d3, int d4, int d5, int expected) {
-        assertEquals(expected, Yatzy.fours(d1, d2, d3, d4, d5));
+        assertEquals(expected, Yatzy.fours(new Dices(d1, d2, d3, d4, d5)));
     }
 
     @ParameterizedTest
@@ -79,7 +79,7 @@ class YatzyTest {
             "4 5 5 5 5 20"
     }, delimiter = ' ')
     void test_fives(int d1, int d2, int d3, int d4, int d5, int expected) {
-        assertEquals(expected, Yatzy.fives(d1, d2, d3, d4, d5));
+        assertEquals(expected, Yatzy.fives(new Dices(d1, d2, d3, d4, d5)));
     }
 
     @ParameterizedTest
@@ -89,7 +89,7 @@ class YatzyTest {
             "6 5 6 6 5 18"
     }, delimiter = ' ')
     void test_sixes(int d1, int d2, int d3, int d4, int d5, int expected) {
-        assertEquals(expected, Yatzy.sixes(d1, d2, d3, d4, d5));
+        assertEquals(expected, Yatzy.sixes(new Dices(d1, d2, d3, d4, d5)));
     }
 
     @ParameterizedTest
@@ -104,7 +104,7 @@ class YatzyTest {
             "5 3 6 6 5 12"
     }, delimiter = ' ')
     void test_onePair(int d1, int d2, int d3, int d4, int d5, int expected) {
-        assertEquals(expected, Yatzy.pair(d1, d2, d3, d4, d5));
+        assertEquals(expected, Yatzy.pair(new Dices(d1, d2, d3, d4, d5)));
     }
 
     @ParameterizedTest
@@ -117,7 +117,7 @@ class YatzyTest {
             "3 3 3 3 1 0"
     }, delimiter = ' ')
     void test_twoPairs(int d1, int d2, int d3, int d4, int d5, int expected) {
-        assertEquals(expected, Yatzy.twoPairs(d1, d2, d3, d4, d5));
+        assertEquals(expected, Yatzy.twoPairs(new Dices(d1, d2, d3, d4, d5)));
     }
 
     @ParameterizedTest
@@ -129,7 +129,7 @@ class YatzyTest {
             "3 3 3 3 1 9"
     }, delimiter = ' ')
     void test_threeOfAKind(int d1, int d2, int d3, int d4, int d5, int expected) {
-        assertEquals(expected, Yatzy.threeOfAKind(d1, d2, d3, d4, d5));
+        assertEquals(expected, Yatzy.threeOfAKind(new Dices(d1, d2, d3, d4, d5)));
     }
 
     @ParameterizedTest
@@ -142,7 +142,7 @@ class YatzyTest {
             "2 2 2 2 2 8"
     }, delimiter = ' ')
     void test_fourOfAKind(int d1, int d2, int d3, int d4, int d5, int expected) {
-        assertEquals(expected, Yatzy.fourOfAKind(d1, d2, d3, d4, d5));
+        assertEquals(expected, Yatzy.fourOfAKind(new Dices(d1, d2, d3, d4, d5)));
     }
 
     @ParameterizedTest
@@ -152,7 +152,7 @@ class YatzyTest {
             "1 2 2 4 5 0"
     }, delimiter = ' ')
     void test_smallStraight(int d1, int d2, int d3, int d4, int d5, int expected) {
-        assertEquals(expected, Yatzy.smallStraight(d1, d2, d3, d4, d5));
+        assertEquals(expected, Yatzy.smallStraight(new Dices(d1, d2, d3, d4, d5)));
     }
 
     @ParameterizedTest
@@ -162,7 +162,7 @@ class YatzyTest {
             "1 2 2 4 5 0"
     }, delimiter = ' ')
     void test_largeStraight(int d1, int d2, int d3, int d4, int d5, int expected) {
-        assertEquals(expected, Yatzy.largeStraight(d1, d2, d3, d4, d5));
+        assertEquals(expected, Yatzy.largeStraight(new Dices(d1, d2, d3, d4, d5)));
     }
 
     @ParameterizedTest
@@ -174,6 +174,6 @@ class YatzyTest {
             "4 4 4 4 4 0"
     }, delimiter = ' ')
     void test_fullHouse(int d1, int d2, int d3, int d4, int d5, int expected) {
-        assertEquals(expected, Yatzy.fullHouse(d1, d2, d3, d4, d5));
+        assertEquals(expected, Yatzy.fullHouse(new Dices(d1, d2, d3, d4, d5)));
     }
 }
