@@ -131,14 +131,17 @@ class YatzyTest {
         assertEquals(expected, Yatzy.three_of_a_kind(d1, d2, d3, d4, d5));
     }
 
-    @Test
-    void four_of_a_kind() {
-        assertEquals(12, Yatzy.four_of_a_kind(3, 3, 3, 3, 5));
-        assertEquals(20, Yatzy.four_of_a_kind(5, 5, 5, 4, 5));
-        assertEquals(12, Yatzy.four_of_a_kind(3, 3, 3, 3, 3));
-        assertEquals(8, Yatzy.four_of_a_kind(2, 2, 2, 2, 5));
-        assertEquals(0, Yatzy.four_of_a_kind(2, 2, 2, 5, 5));
-        assertEquals(8, Yatzy.four_of_a_kind(2, 2, 2, 2, 2));
+    @ParameterizedTest
+    @CsvSource(value = {
+            "3 3 3 3 5 12",
+            "5 5 5 4 5 20",
+            "3 3 3 3 3 12",
+            "2 2 2 2 5 8",
+            "2 2 2 5 5 0",
+            "2 2 2 2 2 8"
+    }, delimiter = ' ')
+    void test_four_of_a_kind(int d1, int d2, int d3, int d4, int d5, int expected) {
+        assertEquals(expected, Yatzy.four_of_a_kind(d1, d2, d3, d4, d5));
     }
 
     @Test
