@@ -41,14 +41,8 @@ public class Yatzy {
     }
 
     public int fours() {
-        int sum;
-        sum = 0;
-        for (int at = 0; at != 5; at++) {
-            if (dice[at] == 4) {
-                sum += 4;
-            }
-        }
-        return sum;
+        DiceResults diceResults = new DiceResults(dice[0], dice[1], dice[2], dice[3], dice[4]);
+        return YatzyMod.FOURS.calculate(diceResults);
     }
 
     public int fives() {
