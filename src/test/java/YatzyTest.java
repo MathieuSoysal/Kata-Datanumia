@@ -29,13 +29,16 @@ class YatzyTest {
         assertEquals(expected, Yatzy.yatzy(d1, d2, d3, d4, d5));
     }
 
-    @Test
-    void test_1s() {
-        assertEquals(1, Yatzy.ones(1, 2, 3, 4, 5));
-        assertEquals(2, Yatzy.ones(1, 2, 1, 4, 5));
-        assertEquals(0, Yatzy.ones(6, 2, 2, 4, 5));
-        assertEquals(4, Yatzy.ones(1, 2, 1, 1, 1));
-        assertEquals(0, Yatzy.ones(3, 3, 3, 4, 5));
+    @ParameterizedTest
+    @CsvSource(value = {
+            "1 2 3 4 5 1",
+            "1 2 1 4 5 2",
+            "6 2 2 4 5 0",
+            "1 2 1 1 1 4",
+            "3 3 3 4 5 0"
+    }, delimiter = ' ')
+    void test_1s(int d1, int d2, int d3, int d4, int d5, int expected) {
+        assertEquals(expected, Yatzy.ones(d1, d2, d3, d4, d5));
     }
 
     @Test
