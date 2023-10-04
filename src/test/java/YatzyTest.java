@@ -41,11 +41,14 @@ class YatzyTest {
         assertEquals(expected, Yatzy.ones(d1, d2, d3, d4, d5));
     }
 
-    @Test
-    void test_2s() {
-        assertEquals(4, Yatzy.twos(1, 2, 3, 2, 6));
-        assertEquals(10, Yatzy.twos(2, 2, 2, 2, 2));
-        assertEquals(4, Yatzy.twos(2, 3, 2, 5, 1));
+    @ParameterizedTest
+    @CsvSource(value = {
+            "1 2 3 2 6 4",
+            "2 2 2 2 2 10",
+            "2 3 2 5 1 4"
+    }, delimiter = ' ')
+    void test_2s(int d1, int d2, int d3, int d4, int d5, int expected) {
+        assertEquals(expected, Yatzy.twos(d1, d2, d3, d4, d5));
     }
 
     @Test
