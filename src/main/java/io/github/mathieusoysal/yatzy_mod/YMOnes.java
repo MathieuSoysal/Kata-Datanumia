@@ -6,8 +6,9 @@ class YMOnes implements YatzyModInterface {
 
     @Override
     public int calculate(DiceResults diceResults) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'calculate'");
+        return diceResults.getDices()
+                .filter(i -> i == 1)
+                .sum();
     }
 
 }
