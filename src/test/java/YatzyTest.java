@@ -91,16 +91,19 @@ class YatzyTest {
         assertEquals(expected, new Yatzy(d1, d2, d3, d4, d5).sixes());
     }
 
-    @Test
-    void one_pair() {
-        assertEquals(0, Yatzy.score_pair(1, 2, 3, 4, 5));
-        assertEquals(8, Yatzy.score_pair(3, 3, 3, 4, 4));
-        assertEquals(12, Yatzy.score_pair(1, 1, 6, 2, 6));
-        assertEquals(6, Yatzy.score_pair(3, 3, 3, 4, 1));
-        assertEquals(6, Yatzy.score_pair(3, 3, 3, 3, 1));
-        assertEquals(6, Yatzy.score_pair(3, 4, 3, 5, 6));
-        assertEquals(10, Yatzy.score_pair(5, 3, 3, 3, 5));
-        assertEquals(12, Yatzy.score_pair(5, 3, 6, 6, 5));
+    @ParameterizedTest
+    @CsvSource(value = {
+            "1 2 3 4 5 0",
+            "3 3 3 4 4 8",
+            "1 1 6 2 6 12",
+            "3 3 3 4 1 6",
+            "3 3 3 3 1 6",
+            "3 4 3 5 6 6",
+            "5 3 3 3 5 10",
+            "5 3 6 6 5 12"
+    }, delimiter = ' ')
+    void test_one_pair(int d1, int d2, int d3, int d4, int d5, int expected) {
+        assertEquals(expected, Yatzy.score_pair(d1, d2, d3, d4, d5));
     }
 
     @Test
