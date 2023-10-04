@@ -104,7 +104,7 @@ class YatzyTest {
             "5 3 6 6 5 12"
     }, delimiter = ' ')
     void test_onePair(int d1, int d2, int d3, int d4, int d5, int expected) {
-        assertEquals(expected, Yatzy.score_pair(d1, d2, d3, d4, d5));
+        assertEquals(expected, Yatzy.pair(d1, d2, d3, d4, d5));
     }
 
     @ParameterizedTest
@@ -117,7 +117,7 @@ class YatzyTest {
             "3 3 3 3 1 0"
     }, delimiter = ' ')
     void test_twoPairs(int d1, int d2, int d3, int d4, int d5, int expected) {
-        assertEquals(expected, Yatzy.two_pair(d1, d2, d3, d4, d5));
+        assertEquals(expected, Yatzy.twoPairs(d1, d2, d3, d4, d5));
     }
 
     @ParameterizedTest
@@ -129,7 +129,7 @@ class YatzyTest {
             "3 3 3 3 1 9"
     }, delimiter = ' ')
     void test_threeOfAKind(int d1, int d2, int d3, int d4, int d5, int expected) {
-        assertEquals(expected, Yatzy.three_of_a_kind(d1, d2, d3, d4, d5));
+        assertEquals(expected, Yatzy.threeOfAKind(d1, d2, d3, d4, d5));
     }
 
     @ParameterizedTest
@@ -142,7 +142,7 @@ class YatzyTest {
             "2 2 2 2 2 8"
     }, delimiter = ' ')
     void test_fourOfAKind(int d1, int d2, int d3, int d4, int d5, int expected) {
-        assertEquals(expected, Yatzy.four_of_a_kind(d1, d2, d3, d4, d5));
+        assertEquals(expected, Yatzy.fourOfAKind(d1, d2, d3, d4, d5));
     }
 
     @ParameterizedTest

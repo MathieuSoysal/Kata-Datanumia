@@ -54,19 +54,19 @@ public class Yatzy {
         return YatzyMod.SIXES.calculateScore(diceResults);
     }
 
-    public static int score_pair(int d1, int d2, int d3, int d4, int d5) {
+    public static int pair(int d1, int d2, int d3, int d4, int d5) {
         return calculateScore(YatzyMod.PAIR, new Dices(d1, d2, d3, d4, d5));
     }
 
-    public static int two_pair(int d1, int d2, int d3, int d4, int d5) {
+    public static int twoPairs(int d1, int d2, int d3, int d4, int d5) {
         return calculateScore(YatzyMod.TWO_PAIRS, new Dices(d1, d2, d3, d4, d5));
     }
 
-    public static int four_of_a_kind(int d1, int d2, int d3, int d4, int d5) {
+    public static int fourOfAKind(int d1, int d2, int d3, int d4, int d5) {
         return calculateScore(YatzyMod.FOUR_OF_A_KIND, new Dices(d1, d2, d3, d4, d5));
     }
 
-    public static int three_of_a_kind(int d1, int d2, int d3, int d4, int d5) {
+    public static int threeOfAKind(int d1, int d2, int d3, int d4, int d5) {
         return calculateScore(YatzyMod.THREE_OF_A_KIND, new Dices(d1, d2, d3, d4, d5));
     }
 
