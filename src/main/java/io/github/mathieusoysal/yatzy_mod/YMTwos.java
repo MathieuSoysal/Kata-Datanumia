@@ -6,8 +6,7 @@ class YMTwos implements YatzyModInterface {
 
     @Override
     public int calculate(DiceResults diceResults) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'calculate'");
+        return YatzyModUtils.filterAndSum(2, diceResults);
     }
 
 }
