@@ -50,6 +50,7 @@ class YatzyTest {
 
     @Test
     void fours_test() {
+        assertEquals(8, new Yatzy(1, 1, 2, 4, 4).fours());
         assertEquals(12, new Yatzy(4, 4, 4, 5, 5).fours());
         assertEquals(8, new Yatzy(4, 4, 5, 5, 5).fours());
         assertEquals(4, new Yatzy(4, 5, 5, 5, 5).fours());
