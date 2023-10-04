@@ -72,6 +72,11 @@ class YatzyTest {
 
     @Test
     void one_pair() {
+        assertEquals(0, Yatzy.score_pair(1, 2, 3, 4, 5));
+        assertEquals(8, Yatzy.score_pair(3, 3, 3, 4, 4));
+        assertEquals(12, Yatzy.score_pair(1, 1, 6, 2, 6));
+        assertEquals(6, Yatzy.score_pair(3, 3, 3, 4, 1));
+        assertEquals(6, Yatzy.score_pair(3, 3, 3, 3, 1));
         assertEquals(6, Yatzy.score_pair(3, 4, 3, 5, 6));
         assertEquals(10, Yatzy.score_pair(5, 3, 3, 3, 5));
         assertEquals(12, Yatzy.score_pair(5, 3, 6, 6, 5));
