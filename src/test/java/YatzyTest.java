@@ -164,12 +164,15 @@ class YatzyTest {
         assertEquals(expected, Yatzy.largeStraight(d1, d2, d3, d4, d5));
     }
 
-    @Test
-    void fullHouse() {
-        assertEquals(18, Yatzy.fullHouse(6, 2, 2, 2, 6));
-        assertEquals(0, Yatzy.fullHouse(2, 3, 4, 5, 6));
-        assertEquals(8, Yatzy.fullHouse(1, 1, 2, 2, 2));
-        assertEquals(0, Yatzy.fullHouse(2, 2, 3, 3, 4));
-        assertEquals(0, Yatzy.fullHouse(4, 4, 4, 4, 4));
+    @ParameterizedTest
+    @CsvSource(value = {
+            "6 2 2 2 6 18",
+            "2 3 4 5 6 0",
+            "1 1 2 2 2 8",
+            "2 2 3 3 4 0",
+            "4 4 4 4 4 0"
+    }, delimiter = ' ')
+    void test_full_house(int d1, int d2, int d3, int d4, int d5, int expected) {
+        assertEquals(expected, Yatzy.fullHouse(d1, d2, d3, d4, d5));
     }
 }
