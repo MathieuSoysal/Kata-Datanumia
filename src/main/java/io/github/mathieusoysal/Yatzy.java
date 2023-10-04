@@ -1,15 +1,12 @@
 package io.github.mathieusoysal;
 
+import io.github.mathieusoysal.yatzy_mod.YatzyMod;
+
 public class Yatzy {
 
     public static int chance(int d1, int d2, int d3, int d4, int d5) {
-        int total = 0;
-        total += d1;
-        total += d2;
-        total += d3;
-        total += d4;
-        total += d5;
-        return total;
+        DiceResults diceResults = new DiceResults(d1, d2, d3, d4, d5);
+        return YatzyMod.CHANCE.calculate(diceResults);
     }
 
     public static int yatzy(int... dice) {
