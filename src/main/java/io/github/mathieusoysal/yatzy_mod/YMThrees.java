@@ -5,8 +5,8 @@ import io.github.mathieusoysal.Dices;
 class YMThrees implements YatzyModInterface {
 
     @Override
-    public int calculateScore(Dices diceResults) {
-        return YatzyModUtils.filterAndSum(3, diceResults);
+    public int calculateScore(Dices dices) {
+        return YatzyModUtils.filterAndSum(3, dices);
     }
 
 }

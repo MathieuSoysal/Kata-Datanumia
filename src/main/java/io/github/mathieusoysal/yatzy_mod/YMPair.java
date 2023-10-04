@@ -1,18 +1,12 @@
 package io.github.mathieusoysal.yatzy_mod;
 
-import java.util.Collection;
-import java.util.Collections;
-
 import io.github.mathieusoysal.Dices;
 
 class YMPair implements YatzyModInterface {
 
     @Override
-    public int calculateScore(Dices diceResults) {
-        Collection<Integer> diceCollection = diceResults.getDicesIntStream()
-                .boxed().toList();
-        return diceResults.getDicesIntStream()
-                .filter(v -> Collections.frequency(diceCollection, v) > 1)
+    public int calculateScore(Dices dices) {
+        return YatzyModUtils.filterByFrequency(2, dices)
                 .max().orElse(0) * 2;
     }
 

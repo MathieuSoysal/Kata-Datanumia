@@ -5,8 +5,8 @@ import io.github.mathieusoysal.Dices;
 class YMChance implements YatzyModInterface {
 
     @Override
-    public int calculateScore(Dices diceResults) {
-        return diceResults.getDicesIntStream().sum();
+    public int calculateScore(Dices dices) {
+        return dices.getDicesIntStream().sum();
     }
 
 }
