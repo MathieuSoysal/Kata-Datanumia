@@ -69,7 +69,7 @@ class YatzyTest {
             "4 5 5 5 5 4"
     }, delimiter = ' ')
     void test_fours(int d1, int d2, int d3, int d4, int d5, int expected) {
-        assertEquals(expected, new Yatzy(d1, d2, d3, d4, d5).fours());
+        assertEquals(expected, Yatzy.fours(d1, d2, d3, d4, d5));
     }
 
     @ParameterizedTest
@@ -79,7 +79,7 @@ class YatzyTest {
             "4 5 5 5 5 20"
     }, delimiter = ' ')
     void test_fives(int d1, int d2, int d3, int d4, int d5, int expected) {
-        assertEquals(expected, new Yatzy(d1, d2, d3, d4, d5).fives());
+        assertEquals(expected, Yatzy.fives(d1, d2, d3, d4, d5));
     }
 
     @ParameterizedTest
@@ -89,7 +89,7 @@ class YatzyTest {
             "6 5 6 6 5 18"
     }, delimiter = ' ')
     void test_sixes(int d1, int d2, int d3, int d4, int d5, int expected) {
-        assertEquals(expected, new Yatzy(d1, d2, d3, d4, d5).sixes());
+        assertEquals(expected, Yatzy.sixes(d1, d2, d3, d4, d5));
     }
 
     @ParameterizedTest
