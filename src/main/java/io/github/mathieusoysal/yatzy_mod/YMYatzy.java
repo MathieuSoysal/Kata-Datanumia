@@ -6,8 +6,7 @@ class YMYatzy implements YatzyModInterface {
 
     @Override
     public int calculate(DiceResults diceResults) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'calculate'");
+        return diceResults.getDices().distinct().count() == 1 ? 50 : 0;
     }
 
 }
