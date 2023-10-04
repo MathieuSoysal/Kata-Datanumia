@@ -6,9 +6,7 @@ class YMOnes implements YatzyModInterface {
 
     @Override
     public int calculate(DiceResults diceResults) {
-        return diceResults.getDices()
-                .filter(i -> i == 1)
-                .sum();
+        return YatzyModUtils.filterAndSum(1, diceResults);
     }
 
 }
