@@ -144,11 +144,14 @@ class YatzyTest {
         assertEquals(expected, Yatzy.four_of_a_kind(d1, d2, d3, d4, d5));
     }
 
-    @Test
-    void smallStraight() {
-        assertEquals(15, Yatzy.smallStraight(1, 2, 3, 4, 5));
-        assertEquals(15, Yatzy.smallStraight(2, 3, 4, 5, 1));
-        assertEquals(0, Yatzy.smallStraight(1, 2, 2, 4, 5));
+    @ParameterizedTest
+    @CsvSource(value = {
+            "1 2 3 4 5 15",
+            "2 3 4 5 1 15",
+            "1 2 2 4 5 0"
+    }, delimiter = ' ')
+    void test_small_straight(int d1, int d2, int d3, int d4, int d5, int expected) {
+        assertEquals(expected, Yatzy.smallStraight(d1, d2, d3, d4, d5));
     }
 
     @Test
