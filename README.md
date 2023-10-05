@@ -1,83 +1,108 @@
-[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=MathieuSoysal_Kata-Datanumia)](https://sonarcloud.io/summary/new_code?id=MathieuSoysal_Kata-Datanumia)
-
+[![Quality Gate](https://sonarcloud.io/api/project_badges/quality_gate?project=MathieuSoysal_Kata-Datanumia)](https://sonarcloud.io/summary/new_code?id=MathieuSoysal_Kata-Datanumia)
 # Kata - Datanumia
+
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=MathieuSoysal_Kata-Datanumia&metric=coverage)](https://sonarcloud.io/summary/new_code?id=MathieuSoysal_Kata-Datanumia) 
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=MathieuSoysal_Kata-Datanumia&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=MathieuSoysal_Kata-Datanumia)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=MathieuSoysal_Kata-Datanumia&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=MathieuSoysal_Kata-Datanumia)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=MathieuSoysal_Kata-Datanumia&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=MathieuSoysal_Kata-Datanumia)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=MathieuSoysal_Kata-Datanumia&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=MathieuSoysal_Kata-Datanumia)
 
+## Table of Contents
 
-## 🟢 DevOps
+- [Introduction](#introduction)
+- [DevOps](#devops)
+  - [Devcontainer](#devcontainer)
+  - [GitHub Actions - SonarCloud](#github-actions-sonarcloud)
+- [Refactor](#refactor)
+  - [Bad Practices in Test](#bad-practices-in-test)
+    - [Name of the Tests](#name-of-the-tests)
+    - [Content of the Tests](#content-of-the-tests)
+  - [Solution to Refactor Test](#solution-to-refactor-test)
+    - [Test Parameterization](#test-parameterization)
+    - [Rename Test Methods](#rename-test-methods)
+  - [Bad Practices in the Main Code](#bad-practices-in-the-main-code)
+    - [Too Many Methods in the Same Class](#too-many-methods-in-the-same-class)
+    - [Too Many Parameters in the Same Method](#too-many-parameters-in-the-same-method)
+    - [Bad Scoping of the Methods](#bad-scoping-of-the-methods)
+  - [Solution to Refactor the Main Code](#solution-to-refactor-the-main-code)
+    - [Split the Main Class](#split-the-main-class)
+    - [Handling Incorrect Dice Values](#handling-incorrect-dice-values)
+    - [Reduce the Number of Parameters](#reduce-the-number-of-parameters)
+    - [Reduce the Size of Methods](#reduce-the-size-of-methods)
+- [Conclusion](#conclusion)
 
-### Bonus - Devcontainer
+## Introduction
 
-I have added a devcontainer to use VSCode in a container with all the tools needed to work on the project. It's a good way to have a common environment for all the developers. It will install automatically the tools (java, maven, sonar-scanner, ...) needed to work on the project.
+This README provides an overview of the Kata - Datanumia project, showcasing its quality, code coverage, and maintainability metrics. It also outlines DevOps practices, including the use of Devcontainer for a consistent development environment and GitHub Actions integrated with SonarCloud for continuous code quality monitoring.
 
-To use it, you need to install the [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension.
+## DevOps
 
+### Devcontainer
 
+I have implemented a Devcontainer setup to facilitate development on this project. Devcontainer allows developers to use Visual Studio Code in a containerized environment, ensuring a consistent development environment for all team members. It automates the installation of essential tools such as Java, Maven, and Sonar Scanner.
+
+To use Devcontainer, please install the [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension in Visual Studio Code.
+
+### GitHub Actions - SonarCloud
+
+I have integrated GitHub Actions with SonarCloud to run code analysis on each push to the master branch. This integration checks the code quality and code coverage of the project, providing valuable insights into code maintainability and reliability.
+
+To view the analysis results, click on the badge at the top of this README or [here](https://sonarcloud.io/summary/new_code?id=MathieuSoysal_Kata-Datanumia).
 
 ## Refactor
-### 🔴 Bad practices in Test :
-- **Name of the tests**
 
-  Sometimes the name doesn't have the appropriate norm or does not follow the appropriate name of other tests.
+### 🔴 Bad Practices in Test
 
-- Content of the tests
+#### Name of the Tests
 
-  The test can be repetitive and redundant at times, or it may perform unnecessary work.
+In some instances, test names do not adhere to appropriate naming conventions or lack consistency with other tests.
 
-### 🟢 Solution to refactor test:
+#### Content of the Tests
 
-- **Test parametrized**
+Tests may exhibit redundancy or perform unnecessary work, making them less efficient.
 
-  I employed the parametrized test to decrease code repetition and enhance the readability of the tests.
+### 🟢 Solution to Refactor Test
 
-- **Rename methods of tests**
-  To uniformize the naming of some methods, to follow the rules of the naming convention of Java, and to follow the naming norm of other methods. 
+#### Test Parameterization
 
-### 🔴 Bad practices in the main code :
+I have introduced parameterized tests to reduce code repetition and improve test readability.
 
-- **Too many methods in the same class**
+#### Rename Test Methods
 
-  The main class Yatzy contains too many methods. Some of them are too long or do not follow good name norming. The *Single responsibility principle* is not respected.
+To ensure uniformity in test method naming, I have aligned them with Java naming conventions and consistent naming practices across the project.
 
-- **Too many parameters in the same method**
+### 🔴 Bad Practices in the Main Code
 
-  Some methods have too many parameters or the parameters don't follow the good name norming.
+#### Too Many Methods in the Same Class
 
-- **Bad scoping of the methods**
+The main class, Yatzy, contains an excessive number of methods, some of which are overly lengthy or do not adhere to proper naming conventions. This violates the Single Responsibility Principle.
 
-  Methods don't have a uniform scope, some methods are static, and some methods are not static.
-  
+#### Too Many Parameters in the Same Method
 
-### 🟢 Solution to refactor the main code:
+Certain methods suffer from an overload of parameters, leading to readability and maintainability issues. Additionally, some parameter names do not follow naming conventions.
 
-- **Split the main class Yatzy**
+#### Bad Scoping of the Methods
 
-  I split the class Yatzy into several classes. Each class has a specific role. It's easier to read and understand the code. To split the class, I used the design pattern command. I created a class for each kind of score calculator, and I created a class to manage the score calculator. The class Yatzy is now a facade and the *Single responsibility principle* is respected.
+Methods lack consistent scoping, with some being static while others are not.
 
-- **Handling the incorrect dice values**
+### 🟢 Solution to Refactor the Main Code
 
-  I added a method to check if the dice values are correct. If not, it will throw an exception.
+#### Split the Main Class
 
-- **Reduce the number of parameters**
+I have refactored the Yatzy class into multiple smaller classes, each with a specific role. This restructuring enhances code readability.
 
-  I reduced the number of parameters of some methods. To do that, I created a new class *Dices* to manage the dices. I also renamed some parameters to follow the norming convention of Java.
+#### Handling Incorrect Dice Values
 
-- **Reduce the size of methods**
+I added a method to validate dice values, ensuring that incorrect values result in an exception.
 
-  I reduced the size of the methods to make them more readable and easier to understand. To do that I used IntStream and Stream API. I also renamed some methods to follow the good name norming.
+#### Reduce the Number of Parameters
 
-## 🟢 DevOps
+To enhance code readability, I reduced the number of parameters in certain methods by introducing a new class, "Dices," to manage dice-related operations.
 
-### Bonus - GitHub Actions - SonarCloud
+#### Reduce the Size of Methods
 
-I have added GitHub Actions to run SonarCloud analysis on each push on the master branch. It will check the code quality and the code coverage of the project.
+I have reduced the size of methods to improve code comprehension and maintainability. To do that I used IntStream and Stream API.
 
-To see the result of the analysis, click on the badge at the top of the README.
+## Conclusion
 
-________
-
-*Thanks you for reading me !*
+Thank you for exploring the Kata - Datanumia project. I have focused on enhancing code quality, maintainability, and test readability, as well as implementing DevOps practices for a smoother development experience, including the use of Devcontainer and [GitHub Actions integrated with SonarCloud](https://sonarcloud.io/summary/new_code?id=MathieuSoysal_Kata-Datanumia). Your feedback and contributions are greatly appreciated.
