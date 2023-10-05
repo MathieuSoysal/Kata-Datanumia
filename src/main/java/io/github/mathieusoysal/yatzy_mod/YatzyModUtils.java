@@ -10,7 +10,6 @@ import io.github.mathieusoysal.Dices;
 class YatzyModUtils {
 
     private YatzyModUtils() {
-        throw new IllegalStateException("Utility class");
     }
 
     static int filterAndSum(int diceNumber, Dices diceResults) {
