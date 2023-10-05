@@ -90,7 +90,7 @@ Methods lack consistent scoping, with some being static while others are not.
 
 #### Split the Main Class
 
-I have refactored the Yatzy class into multiple smaller classes, each with a specific role. This restructuring enhances code readability.
+I have refactored the Yatzy class into multiple smaller classes, each with a specific role. To split the class, I used the design pattern *command*. I created a class for each kind of score calculator, and I created a class *YatzyMod* to manage the score calculator. The class *Yatzy* is now a facade and the *Single responsibility principle* is respected.
 
 #### Handling Incorrect Dice Values
 
