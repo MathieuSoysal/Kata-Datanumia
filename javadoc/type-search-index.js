@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"io.github.mathieusoysal","l":"Dices"},{"p":"io.github.mathieusoysal.exception","l":"IncorrectDiceValueException"},{"p":"io.github.mathieusoysal","l":"Yatzy"},{"p":"io.github.mathieusoysal.yatzy_mod","l":"YatzyMod"}];updateSearchResults();
