@@ -4,6 +4,9 @@ import io.github.mathieusoysal.yatzy_mod.YatzyMod;
 
 public class Yatzy {
 
+    private Yatzy() {
+    }
+
     public static int calculateScore(YatzyMod mod, Dices dices) {
         return mod.calculateScore(dices);
     }
