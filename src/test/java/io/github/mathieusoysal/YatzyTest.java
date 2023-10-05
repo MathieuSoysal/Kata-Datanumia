@@ -171,7 +171,8 @@ class YatzyTest {
             "2 3 4 5 6 0",
             "1 1 2 2 2 8",
             "2 2 3 3 4 0",
-            "4 4 4 4 4 0"
+            "4 4 4 4 4 0",
+            "4 4 4 1 3 0"
     }, delimiter = ' ')
     void test_fullHouse(int d1, int d2, int d3, int d4, int d5, int expected) {
         assertEquals(expected, Yatzy.fullHouse(new Dices(d1, d2, d3, d4, d5)));
