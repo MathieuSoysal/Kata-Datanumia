@@ -6,6 +6,7 @@
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=MathieuSoysal_Kata-Datanumia&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=MathieuSoysal_Kata-Datanumia)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=MathieuSoysal_Kata-Datanumia&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=MathieuSoysal_Kata-Datanumia)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=MathieuSoysal_Kata-Datanumia&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=MathieuSoysal_Kata-Datanumia)
+[![Javadoc](https://img.shields.io/badge/JavaDoc-Online-green)](https://mathieusoysal.github.io/Kata-Datanumia/javadoc/)
 
 ## Table of Contents
 
