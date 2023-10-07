@@ -115,15 +115,6 @@ classDiagram
         class YMSixes{
             ~calculateScore(dices: Dices): int
         }
-
-        class YatzyModUtils{
-            ~filterAndSum(diceNumber: int, diceResults: Dices)$: int
-            ~isItEqualsWhenDicesIsSorted(dices: Dices, toBeEquals: List~Integer~)$: boolean
-            ~filterByFrequency(frequency: int, dices: Dices)$: IntStream
-            ~containsExactFrequencyDice(frequency: int, dices: Dices)$: boolean
-        }
-
-
     }
     YatzyMod --> "1" YatzyModInterface: YatzyModCalculator
 
@@ -143,21 +134,5 @@ classDiagram
     YMFours ..|> YatzyModInterface
     YMFives ..|> YatzyModInterface
     YMSixes ..|> YatzyModInterface
-
-    YMSixes ..> YatzyModUtils : <<use>>
-    YMFives ..> YatzyModUtils : <<use>>
-    YMFours ..> YatzyModUtils : <<use>>
-    YMThrees ..> YatzyModUtils : <<use>>
-    YMTwos ..> YatzyModUtils : <<use>>
-    YMOnes ..> YatzyModUtils : <<use>>
-    YMFourOfAKind ..> YatzyModUtils : <<use>>
-    YMThreeOfAKind ..> YatzyModUtils : <<use>>
-    YMPair ..> YatzyModUtils : <<use>>
-    YMTwoPairs ..> YatzyModUtils : <<use>>
-    YMFullHouse ..> YatzyModUtils : <<use>>
-    YMLargeStraight ..> YatzyModUtils : <<use>>
-    YMSmallStraight ..> YatzyModUtils : <<use>>
-
-
 
 ```
