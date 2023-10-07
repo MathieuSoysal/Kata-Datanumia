@@ -24,9 +24,6 @@ class YMTwos implements YatzyModInterface {
      */
     @Override
     public int calculateScore(Dices dices) {
-        if (dices == null) {
-            throw new IllegalArgumentException("Input dices cannot be null.");
-        }
         return YatzyModUtils.filterAndSum(2, dices);
     }
 }

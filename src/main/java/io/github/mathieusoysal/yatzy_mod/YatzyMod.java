@@ -1,6 +1,7 @@
 package io.github.mathieusoysal.yatzy_mod;
 
 import io.github.mathieusoysal.Dices;
+import io.github.mathieusoysal.exception.NullDicesException;
 
 /**
  * The {@code YatzyMod} enum represents different scoring categories in the
@@ -150,8 +151,12 @@ public enum YatzyMod {
      *
      * @param dices The set of dice.
      * @return The calculated score for the category.
+     * @throws NullDicesException If the given set of dice is null.
+     * @see NullDicesException
      */
     public int calculateScore(Dices dices) {
+        if (dices == null)
+            throw new NullDicesException();
         return mod.calculateScore(dices);
     }
 }
