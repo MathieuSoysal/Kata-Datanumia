@@ -3,9 +3,16 @@ package io.github.mathieusoysal.yatzy_mod;
 import io.github.mathieusoysal.Dices;
 
 /**
- * The YMPair class represents the "Pair" category in the Yatzy game.
- * In the "Pair" category, the player scores the sum of the two highest matching
- * dice values.
+ * The {@code YMPair} class represents the "Pair" category in the Yatzy game.
+ * 
+ * <p>
+ * In the "Pair" category, the player scores the sum of the two highest
+ * matching dice values.
+ * </p>
+ *
+ * @author MathieuSoysal
+ * @see YatzyModInterface
+ * @see YatzyModUtils
  */
 class YMPair implements YatzyModInterface {
 
@@ -15,7 +22,8 @@ class YMPair implements YatzyModInterface {
      *
      * @param dices The set of dice to calculate the score for.
      * @return The calculated score, which is the sum of the two highest matching
-     *         dice values or zero if not possible.
+     *         dice values, or zero if not possible.
+     * @see YatzyModUtils#filterByFrequency(int, Dices)
      */
     @Override
     public int calculateScore(Dices dices) {

@@ -8,7 +8,11 @@ import java.util.stream.IntStream;
 import io.github.mathieusoysal.Dices;
 
 /**
- * The YatzyModUtils class provides utility methods for Yatzy game calculations.
+ * The {@code YatzyModUtils} class provides utility methods for Yatzy game score
+ * calculations.
+ * 
+ * @author MathieuSoysal
+ * @see Dices
  */
 class YatzyModUtils {
 
@@ -33,8 +37,8 @@ class YatzyModUtils {
          *
          * @param dices      The set of dice to check.
          * @param toBeEquals The list of values to compare with the sorted dice values.
-         * @return True if the dice values match the specified list when sorted, false
-         *         otherwise.
+         * @return {@code true} if the dice values match the specified list when sorted,
+         *         {@code false} otherwise.
          */
         static boolean isItEqualsWhenDicesIsSorted(Dices dices, List<Integer> toBeEquals) {
                 return dices.getDicesIntStream()
@@ -47,7 +51,7 @@ class YatzyModUtils {
          *
          * @param frequency The minimum frequency for dice values.
          * @param dices     The set of dice to filter.
-         * @return An IntStream containing the filtered dice values.
+         * @return An {@code IntStream} containing the filtered dice values.
          */
         static IntStream filterByFrequency(int frequency, Dices dices) {
                 Collection<Integer> diceCollection = dices.getDicesIntStream()
@@ -61,8 +65,8 @@ class YatzyModUtils {
          *
          * @param frequency The exact frequency to check.
          * @param dices     The set of dice to check.
-         * @return True if the dice values contain at least one value with the exact
-         *         frequency, false otherwise.
+         * @return {@code true} if the dice values contain at least one value with the
+         *         exact frequency, {@code false} otherwise.
          */
         static boolean containsExactFrequencyDice(int frequency, Dices dices) {
                 Collection<Integer> diceCollection = dices.getDicesIntStream()

@@ -3,20 +3,30 @@ package io.github.mathieusoysal.yatzy_mod;
 import io.github.mathieusoysal.Dices;
 
 /**
- * The YMTwos class represents the "Twos" category in the Yatzy game.
- * In the "Twos" category, the player scores the sum of the dice that read two.
+ * The {@code YMTwos} class represents the "Twos" category scoring mod in the
+ * Yatzy game.
+ * In this category, players score by summing the values of the dice that show a
+ * two.
+ *
+ * @author MathieuSoysal
+ * @see YatzyModInterface
  */
 class YMTwos implements YatzyModInterface {
 
     /**
-     * Calculates the score for the "Twos" category based on the sum of dice values
-     * that read two.
+     * Calculates the score for the "Twos" category.
      *
      * @param dices The set of dice to calculate the score for.
-     * @return The calculated score, which is the sum of dice values that read two.
+     * @return The calculated score, which is the sum of dice values that show a
+     *         two.
+     *
+     * @see YatzyModUtils#filterAndSum(int, Dices)
      */
     @Override
     public int calculateScore(Dices dices) {
+        if (dices == null) {
+            throw new IllegalArgumentException("Input dices cannot be null.");
+        }
         return YatzyModUtils.filterAndSum(2, dices);
     }
 }

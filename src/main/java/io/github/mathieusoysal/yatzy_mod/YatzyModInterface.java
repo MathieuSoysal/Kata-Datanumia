@@ -3,9 +3,16 @@ package io.github.mathieusoysal.yatzy_mod;
 import io.github.mathieusoysal.Dices;
 
 /**
- * The YatzyModInterface defines a method for calculating scores based on Yatzy
- * game categories.
- * Implementing classes should provide specific scoring logic for each category.
+ * The {@code YatzyModInterface} defines a method for calculating scores based
+ * on Yatzy game categories.
+ * 
+ * <p>
+ * Implementing classes should provide specific scoring logic for each
+ * category.
+ * </p>
+ * 
+ * @author MathieuSoysal
+ * @see Dices
  */
 interface YatzyModInterface {
 
