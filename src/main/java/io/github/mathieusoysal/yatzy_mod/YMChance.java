@@ -13,7 +13,6 @@ import io.github.mathieusoysal.Dices;
  *
  * @author MathieuSoysal
  * @see YatzyModInterface
- * @see YatzyModUtils
  */
 class YMChance implements YatzyModInterface {
 
