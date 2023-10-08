@@ -1,4 +1,4 @@
-name: Deploy Javadoc
+name: Deploy Javadoc and Mutation Testing Report to GitHub Page 🚀
 
 on:
   push:
@@ -10,12 +10,39 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy JavaDoc 🚀
-        uses: MathieuSoysal/Javadoc-publisher.yml@v2.4.0
+
+      - uses: actions/checkout@v3
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          javadoc-branch: javadoc
+          fetch-depth: 0
+
+      - uses: actions/setup-java@v3
+        with:
           java-version: 17
-          target-folder: javadoc # url will be https://<username>.github.io/<repo>/javadoc, This can be left as nothing to generate javadocs in the root folder.
-          project: maven # or gradle
-          # subdirectories: moduleA moduleB #for subdirectories support, needs to be run with custom command
+          distribution: 'adopt'
+          cache: maven
+
+      - name: Generate Javadoc with Maven
+        run: mvn javadoc:aggregate
+        shell: bash
+
+      - name: Generate mutation testing report with Maven
+        run: mvn -DwithHistory test-compile org.pitest:pitest-maven:mutationCoverage
+        shell: bash
+
+      - name: Deploy to GitHub Page 🚀 with Maven
+        uses: JamesIves/github-pages-deploy-action@v4.4.3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: javadoc
+          clean: true
+          folder: target/pit-reports
+          target-folder: pitest
+
+      - name: Deploy to GitHub Page 🚀 with Maven
+        uses: JamesIves/github-pages-deploy-action@v4.4.3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: javadoc
+          clean: true
+          folder: target/site/apidocs
+          target-folder: javadoc
