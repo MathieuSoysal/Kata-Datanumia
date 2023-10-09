@@ -43,7 +43,7 @@
 #server: https://app.code-intelligence.com
 
 ## Set the project name on CI Sense.
-project: Kata-Datanumia
+# project: Kata-Datanumia
 
 ## Set the container registry to upload fuzz containers to.
 # registry: registry.example.org/my-org/my-project
