@@ -11,11 +11,12 @@
     "customizations": {
         "vscode": {
             "extensions": [
-                "vscjava.vscode-java-pack",
-                "SonarSource.sonarlint-vscode",
-                "redhat.vscode-xml",
-                "github.vscode-github-actions"
-            ]
+				"vscjava.vscode-java-pack",
+				"SonarSource.sonarlint-vscode",
+				"redhat.vscode-xml",
+				"github.vscode-github-actions",
+				"ryanluker.vscode-coverage-gutters"
+			]
         }
     }
 }
