@@ -8,6 +8,7 @@
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=MathieuSoysal_Kata-Datanumia&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=MathieuSoysal_Kata-Datanumia)
 [![Javadoc](https://img.shields.io/badge/JavaDoc-online-green)](https://mathieusoysal.github.io/Kata-Datanumia/javadoc/)
 [![Mutation Testing Report](https://img.shields.io/badge/Mutation_testing_report-online-green?link=https%3A%2F%2Fmathieusoysal.github.io%2FKata-Datanumia%2Fpitest%2F)](https://mathieusoysal.github.io/Kata-Datanumia/pitest/)
+[![Fuzzing Test Report](https://img.shields.io/badge/Fuzzing_test_report-online-green)](https://app.code-intelligence.com/dashboard/projects/Kata-Datanumia-769e1c34/campaign_runs/last_run/overview)
 
 
 ## Table of Contents
