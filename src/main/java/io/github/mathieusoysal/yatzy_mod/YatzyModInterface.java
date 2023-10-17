@@ -14,6 +14,7 @@ import io.github.mathieusoysal.Dices;
  * @author MathieuSoysal
  * @see Dices
  */
+@FunctionalInterface
 interface YatzyModInterface {
 
     /**
