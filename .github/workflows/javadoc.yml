@@ -30,7 +30,7 @@ jobs:
         shell: bash
 
       - name: Deploy to GitHub Page 🚀 with Maven
-        uses: JamesIves/github-pages-deploy-action@v4.4.3
+        uses: JamesIves/github-pages-deploy-action@v4.5.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: javadoc
@@ -39,7 +39,7 @@ jobs:
           target-folder: pitest
 
       - name: Deploy to GitHub Page 🚀 with Maven
-        uses: JamesIves/github-pages-deploy-action@v4.4.3
+        uses: JamesIves/github-pages-deploy-action@v4.5.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: javadoc
